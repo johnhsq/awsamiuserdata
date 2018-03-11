@@ -2,7 +2,7 @@
 
 ### Sample script to build apache and php servers
 
-### Script
+##### Script
 
     #!/bin/bash
     yum update -y
@@ -17,9 +17,11 @@
     find /var/www -type f -exec chmod 0664 {} +
     echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
 
-### Test
+##### Test
 You should see apache server from the following url
+
     http://<aws server>/
 
 You should see phpinfo() from the following url
+
     http://<aws server>/phpinfo.php
