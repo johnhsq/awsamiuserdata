@@ -20,7 +20,7 @@
 ##### Test
 Create an instance by the command
 
-    aws ec2 run-instances --image-id ami-824c4ee2 --count 1 --instance-type t2.micro --user-data file://userdata.txt --security-group-ids <value> --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=<value>},{Key=CreatedBy,Value=<vaule},{Key=CreatedDate,Value=<value>}]'
+    aws ec2 run-instances --image-id ami-824c4ee2 --count 1 --instance-type t2.micro --user-data file://userdata.txt --security-group-ids <value> --key-name <value> --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=<value>},{Key=CreatedBy,Value=<vaule},{Key=CreatedDate,Value=<value>}]'
 
 You should see apache server from the following url
 
@@ -57,8 +57,11 @@ You should see phpinfo() from the following url
 ##### Test
 Create an instance by the command
 
-    aws ec2 run-instances --image-id ami-824c4ee2 --count 1 --instance-type t2.micro --user-data file://userdata.txt --security-group-ids <value> --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=<value>},{Key=CreatedBy,Value=<vaule>},{Key=CreatedDate,Value=<value>}]'
+    aws ec2 run-instances --image-id ami-824c4ee2 --count 1 --instance-type t2.micro --user-data file://userdata.txt --security-group-ids <value> --key-name <value> --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=<value>},{Key=CreatedBy,Value=<vaule>},{Key=CreatedDate,Value=<value>}]'
 
 You should see wordpress from the following url
 
     http://<aws server>/
+    http://<aws server>/wordpress
+    http://<aws server>/phpinfo.php
+
